@@ -26,9 +26,9 @@ mex analysis/spktime2count.c
 Demo Run instructions - 
 demorun.m calls SetUp_Sim.m which contains the simulation parameters, this subsequently calls MultiPopSpatialNet_Simulation.m to simulate the network with targetpop receiving static input.
 
-	OUTPUT: Output is a single simulation with the targetpop recieiving static input equal to the value of input 	selected. The demo calculates the rates, spiking activity, and spike count correlations and produces a figure with  4	subplots (similar to subplots presented in a single column of Figure 2).
+OUTPUT: Output is a single simulation with the targetpop recieiving static input equal to the value of input selected. The demo calculates the rates, spiking activity, and spike count correlations and produces a figure with 4 subplots (similar to subplots presented in a single column of Figure 2).
 
-	INPUT: (note demorun.m run as is, the following input instructions are suggestions for changes for the user). 	Uncomment single value of input. Select 1,2,3 or 4 for E, PV, SOM, and VIP respectively to receive static 	input. 
+INPUT: (note demorun.m run as is, the following input instructions are suggestions for changes for the user). Uncomment single value of input. Select 1,2,3 or 4 for E, PV, SOM, and VIP respectively to receive static input. 
 
 demorun.m simulates the network for 3000 ms. 
 After simulation ends, analysis of the network activity begins and is displayed on the output figure.
@@ -48,16 +48,18 @@ For initial simulations, a new weight connection matrix (weight_4pop_4.m) must b
 
 Published results are run for T = 15000 ms and averaged across 5 trials. 
 
-To reproduce published figures - run FigureX.m scripts:
+To reproduce published figures - run FigureX.m scripts in figure_scripts/:
 
-	FigureX.m - where X is a number indicating the figure from the paper. .m scripts are ready to run.
+figure_scripts/ FigureX.m - where X is a number indicating the figure from the paper. .m scripts are ready to run.
 
-	Supplemental/  - contains all Supplemental Figure scripts indicated by SuppFigureX.m
+Supplemental/  - contains all Supplemental Figure scripts indicated by SuppFigureX.m
 
-		BE_figTools/ - figure formatting tools, courtesy of Bernhard Englitz. 
+simulation/ - contains functions for simulating the network model. 
 
-		animation/ - contains three example state animation files  and .m scripts to generate them.
+analysis/ - contains files for analysis of simulation results. 
 
-		data/ - all data to reproduce published figures
-                         (** For this initial submission, we did not include the data files due to their large sizes. We will include them when depositing to online repository upon publication.  ** ) 
+BE_figTools/ - figure formatting tools, courtesy of Bernhard Englitz. 
 
+animation/ - contains three example state animation files  and .m scripts to generate them.
+
+data/ - data to reproduce published figures. The full data files for generating figures can be downloaded from https://zenodo.org/records/15232542 
